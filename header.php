@@ -38,6 +38,6 @@
             </li>
           </ul>
         <?php endif; ?>
-        <section class="logo"></section>
+        <section class="logo-container"><section class="logo"></section></section>
       </header>
       <main>

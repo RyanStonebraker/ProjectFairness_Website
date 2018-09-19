@@ -20,6 +20,7 @@
     </head>
     <body>
       <header>
+        <div class="nav-spacer"></div>
         <nav>
           <a href="#">Home</a>
           <a href="#">About Us</a>

@@ -34,7 +34,7 @@
         <?php if (is_home()) : ?>
           <ul class="social-media">
             <li>
-              <a href="#">Facebook</a>
+              <a href="#"><div class="icons8-facebook"></div></a>
             </li>
           </ul>
         <?php endif; ?>

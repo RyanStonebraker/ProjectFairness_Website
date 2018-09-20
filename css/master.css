@@ -46,6 +46,9 @@ header nav {
   justify-content: center;
   align-items: center;
 }
+header nav i {
+  font-size: 0;
+}
 header nav a {
   color: white;
   text-decoration: none;
@@ -114,6 +117,8 @@ header section.logo-container section.logo {
   padding: 4px;
   border: 3px solid #3f59a3;
   background-repeat: no-repeat;
+  min-height: auto;
+  max-height: auto;
   height: 130px;
 }
 header h1.page-header {
@@ -268,4 +273,64 @@ footer {
   background-color: #3f59a3;
   color: white;
   justify-content: center;
+}
+@media only screen and (max-width: 1000px) {
+  header {
+    height: auto;
+  }
+  header nav {
+    flex-direction: column;
+    transition: all 0.5s ease;
+  }
+  header nav i {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  header nav i:hover {
+    color: #F4CF71;
+    transition: all 0.5s ease;
+  }
+  header nav.mobile-hide {
+    height: 50px;
+    cursor: pointer;
+  }
+  header nav.mobile-hide a {
+    color: transparent;
+    padding: 0;
+    height: 0;
+    font-size: 0;
+  }
+  header ul.social-media {
+    min-height: auto;
+  }
+  header section.logo-container {
+    width: auto;
+    margin-bottom: 15px;
+  }
+  header section.logo-container section.logo {
+    background-size: contain;
+    min-height: 20px;
+    max-height: 130px;
+    height: 10vw;
+  }
+  section.droplet-svg {
+    display: none;
+  }
+  ul.featured {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+  ul.featured li {
+    width: auto;
+  }
+  main article {
+    width: auto;
+  }
+  main ul.wp-block-gallery {
+    margin: 0;
+  }
 }

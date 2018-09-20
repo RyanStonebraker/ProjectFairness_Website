@@ -21,7 +21,8 @@
     <body>
       <header>
         <div class="nav-spacer"></div>
-        <nav>
+        <nav class="mobile-hide">
+          <i class="fas fa-bars"></i>
           <?php
             $nav_locations = get_nav_menu_locations();
             $nav = $nav_locations['top-menu'];

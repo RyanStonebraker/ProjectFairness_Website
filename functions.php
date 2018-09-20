@@ -19,3 +19,14 @@ function register_top_menu() {
   register_nav_menu('top-menu', __('Top Navbar'));
 }
 add_action( 'init', 'register_top_menu' );
+
+function pf_scholarship_winners($atts) {
+	ob_start();
+	query_posts('cat=4');
+	while (have_posts()) {
+		the_post();
+		get_template_part('content', 'winner');
+	}
+	return ob_get_clean();
+}
+add_shortcode('scholarship-winners', 'pf_scholarship_winners');

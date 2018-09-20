@@ -12,10 +12,19 @@
   z-index: -1;
 }
 figure {
-  max-width: 100%;
+  width: 100%;
 }
 figure img {
   max-width: 100%;
+}
+div.wp-block-button a.wp-block-button__link {
+  transition: all 0.5s ease;
+  background-color: #3f59a3;
+}
+div.wp-block-button a.wp-block-button__link:hover {
+  color: black;
+  background-color: #F4CF71;
+  transition: all 0.5s ease;
 }
 html,
 body {
@@ -200,6 +209,26 @@ main article {
 }
 main article h1 {
   font-size: 30px;
+}
+main section.page-body {
+  width: 1000px;
+}
+main article.scholarship-winner {
+  display: flex;
+  margin: 20px 0;
+}
+main article.scholarship-winner figure {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  min-width: 200px;
+}
+main article.scholarship-winner section.content h3 {
+  margin: 0;
+}
+main hr {
+  width: 1000px;
 }
 footer {
   display: flex;

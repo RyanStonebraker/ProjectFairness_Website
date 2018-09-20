@@ -30,3 +30,20 @@ function pf_scholarship_winners($atts) {
 	return ob_get_clean();
 }
 add_shortcode('scholarship-winners', 'pf_scholarship_winners');
+
+function pf_team_members($atts) {
+	ob_start();
+	query_posts('cat=5');
+	while (have_posts()) {
+		the_post();
+		get_template_part('content', 'team_member');
+	}
+	return ob_get_clean();
+}
+add_shortcode('team-members', 'pf_team_members');
+
+function pf_member($atts) {
+	$title = $atts['title'];
+	return "<h5 class='team-title'>${title}</h5>";
+}
+add_shortcode('member', 'pf_member');

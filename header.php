@@ -101,4 +101,6 @@
         </ul>
       <?php endif; ?>
       <main>
-        <section class="page-body"><p <?php post_class(); ?>><?php the_content(); ?></p></section>
+        <?php if (!is_home()) : ?>
+          <section class="page-body"><p <?php post_class(); ?>><?php the_content(); ?></p></section>
+        <?php endif; ?>

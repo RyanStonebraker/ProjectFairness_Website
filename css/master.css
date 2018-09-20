@@ -275,9 +275,10 @@ main section.donation-tracker {
   transition: all 0.5s ease;
   display: flex;
   background-color: #3f59a3;
-  margin: 10px 0;
+  margin: 10px auto;
   padding: 2px;
-  width: 1010px;
+  width: calc(90% + 10px);
+  max-width: 1010px;
   height: 60px;
   justify-content: center;
   align-items: center;
@@ -294,7 +295,8 @@ main section.donation-tracker section.labels {
   position: absolute;
   display: flex;
   height: 50px;
-  width: 1000px;
+  width: 90%;
+  max-width: 900px;
   align-items: center;
 }
 main section.donation-tracker section.labels h1 {

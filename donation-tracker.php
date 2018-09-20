@@ -9,7 +9,7 @@
         $percent_to_goal = 0;
 
     ?>
-    <div class="donation-bar" style="width:<?php echo $percent_to_goal * 1000; ?>px;"></div>
+    <div class="donation-bar" style="width:<?php echo $percent_to_goal * 100; ?>%;"></div>
   <?php else : ?>
     <div class="donation-bar" style="width:500px;"></div>
   <?php endif?>

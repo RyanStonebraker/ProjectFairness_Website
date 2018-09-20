@@ -2,6 +2,7 @@
 require_once(get_template_directory() . '/admin/customizer_helpers.php');
 require_once(get_template_directory() . '/admin/social-media.php');
 require_once(get_template_directory() . '/admin/featured-home.php');
+require_once(get_template_directory() . '/admin/donation-tracker.php');
 
 function projectfairness_frontend_styles() {
 	wp_enqueue_style('pf-style', get_stylesheet_directory_uri() . '/style.css');
@@ -48,3 +49,10 @@ function pf_member($atts) {
 	return "<h5 class='team-title'>${title}</h5>";
 }
 add_shortcode('member', 'pf_member');
+
+function pf_donation_tracker($atts) {
+	ob_start();
+	get_template_part('donation', 'tracker');
+	return ob_get_clean();
+}
+add_shortcode('donation-tracker', 'pf_donation_tracker');

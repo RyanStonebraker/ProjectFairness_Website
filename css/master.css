@@ -267,6 +267,47 @@ main article.team_member a:active {
 main hr {
   width: 1000px;
 }
+main h1.donation-title {
+  margin: 0;
+  text-align: center;
+}
+main section.donation-tracker {
+  transition: all 0.5s ease;
+  display: flex;
+  background-color: #3f59a3;
+  margin: 10px 0;
+  padding: 2px;
+  width: 1010px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+main section.donation-tracker div.donation-bar {
+  width: 500px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: 5px;
+  background-color: #F4CF71;
+  transition: all 0.5s ease;
+}
+main section.donation-tracker section.labels {
+  position: absolute;
+  display: flex;
+  height: 50px;
+  width: 1000px;
+  align-items: center;
+}
+main section.donation-tracker section.labels h1 {
+  margin: 0;
+}
+main section.donation-tracker section.labels h1.current {
+  margin-right: auto;
+  margin-left: 10px;
+}
+main section.donation-tracker section.labels h1.goal {
+  margin-left: auto;
+  margin-right: 10px;
+}
 footer {
   display: flex;
   padding: 30px;
@@ -327,10 +368,31 @@ footer {
   ul.featured li {
     width: auto;
   }
+  main article.team_member figure {
+    min-width: none;
+    max-width: none;
+  }
   main article {
+    flex-direction: column;
     width: auto;
+  }
+  main article figure {
+    min-width: auto;
+  }
+  main article figure img {
+    height: auto;
+    max-width: none;
+  }
+  main article section.content {
+    text-align: center;
   }
   main ul.wp-block-gallery {
     margin: 0;
+  }
+  main section.page-body {
+    width: 100%;
+  }
+  main hr {
+    width: auto;
   }
 }

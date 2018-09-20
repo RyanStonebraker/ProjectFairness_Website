@@ -22,51 +22,72 @@
       <header>
         <div class="nav-spacer"></div>
         <nav>
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Join Our Team</a>
-          <a href="#">Scholarships</a>
-          <a href="#">Mentorship Program</a>
-          <a href="#">Events</a>
-          <a href="#">Contact</a>
-          <a href="#">Donate</a>
-          <a href="#">Get Updates</a>
+          <?php
+            $nav_locations = get_nav_menu_locations();
+            $nav = $nav_locations['top-menu'];
+            $top_nav = wp_get_nav_menu_items($nav);
+            if ($top_nav) :
+              foreach ($top_nav as $nav) : ?>
+                  <a href="<?php echo $nav->url; ?>"><?php echo $nav->title; ?></a>
+              <?php endforeach; ?>
+            <?php endif; ?>
+
         </nav>
         <?php if (is_home()) : ?>
           <ul class="social-media">
             <li>
-              <a href="#"><div class="icons8-facebook"></div></a>
+              <?php if (get_theme_mod('pf_social_media_section_facebook')) : ?>
+                <a href="<?php echo get_theme_mod('pf_social_media_section_facebook'); ?>" target="_blank">
+              <?php else: ?>
+                <a href="#">
+              <?php endif; ?>
+                <div class="icons8-facebook"></div>
+              </a>
             </li>
           </ul>
         <?php endif; ?>
         <section class="logo-container"><section class="logo"></section></section>
       </header>
       <?php if (is_home()) : ?>
-        <section class="droplet-svg">
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 50" xml:space="preserve">
-            <defs>
-              <pattern id="paint-texture" patternUnits="userSpaceOnUse" width="50" height="50">
-                <image xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/texture.png" width="50" height="50" />
-              </pattern>
-            </defs>
-            <path stroke="url(#paint-texture)" class="arrow-path" d="M500,0c0,0-156.1,51.5-252.9,25C76.5-21.7,101,50,101,50"/>
-            <path stroke="url(#paint-texture)" class="arrow-path" d="M501,0c0,0,154.7,51.5,250.8,25c169.1-46.7,144.8,25,144.8,25"/>
-            <path stroke="url(#paint-texture)" class="arrow-path" d="M500,0c0,0,1,40,0,50"/>
-          </svg>
-        </section>
+        <?php if (!get_theme_mod('pf_featured_section_1_hide') && !get_theme_mod('pf_featured_section_2_hide') && !get_theme_mod('pf_featured_section_3_hide')) : ?>
+          <section class="droplet-svg">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 50" xml:space="preserve">
+              <defs>
+                <pattern id="paint-texture" patternUnits="userSpaceOnUse" width="50" height="50">
+                  <image xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/texture.png" width="50" height="50" />
+                </pattern>
+              </defs>
+              <path stroke="url(#paint-texture)" class="arrow-path" d="M500,0c0,0-156.1,51.5-252.9,25C76.5-21.7,101,50,101,50"/>
+              <path stroke="url(#paint-texture)" class="arrow-path" d="M501,0c0,0,154.7,51.5,250.8,25c169.1-46.7,144.8,25,144.8,25"/>
+              <path stroke="url(#paint-texture)" class="arrow-path" d="M500,0c0,0,1,40,0,50"/>
+            </svg>
+          </section>
+        <?php endif; ?>
         <ul class="featured">
-          <li>
-            <div class="featured-img"></div>
-            <p>Our scholarships support select current and former foster youth while they pursue higher education. More information will follow this year.​</p>
-          </li>
-          <li>
-            <div class="featured-img"></div>
-            <p>Our scholarships support select current and former foster youth while they pursue higher education. More information will follow this year.​</p>
-          </li>
-          <li>
-            <div class="featured-img"></div>
-            <p>Our scholarships support select current and former foster youth while they pursue higher education. More information will follow this year.​</p>
-          </li>
+          <?php if (!get_theme_mod('pf_featured_section_1_hide')) : ?>
+            <li>
+              <a href = "<?php echo get_theme_mod('pf_featured_section_1_link'); ?>">
+                <div class="featured-img"><?php echo get_theme_mod('pf_featured_section_1_name'); ?></div>
+              </a>
+              <p><?php echo get_theme_mod('pf_featured_section_1_short_description'); ?></p>
+            </li>
+          <?php endif; ?>
+          <?php if (!get_theme_mod('pf_featured_section_2_hide')) : ?>
+            <li>
+              <a href = "<?php echo get_theme_mod('pf_featured_section_2_link'); ?>">
+                <div class="featured-img"><?php echo get_theme_mod('pf_featured_section_2_name'); ?></div>
+              </a>
+              <p><?php echo get_theme_mod('pf_featured_section_2_short_description'); ?></p>
+            </li>
+          <?php endif; ?>
+          <?php if (!get_theme_mod('pf_featured_section_3_hide')) : ?>
+            <li>
+              <a href = "<?php echo get_theme_mod('pf_featured_section_3_link'); ?>">
+                <div class="featured-img"><?php echo get_theme_mod('pf_featured_section_3_name'); ?></div>
+              </a>
+              <p><?php echo get_theme_mod('pf_featured_section_3_short_description'); ?></p>
+            </li>
+          <?php endif; ?>
         </ul>
       <?php endif; ?>
       <main>

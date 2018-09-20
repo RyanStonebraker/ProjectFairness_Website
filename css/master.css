@@ -139,6 +139,8 @@ ul.featured li {
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 30%;
+  word-wrap: break-word;
 }
 @keyframes featured_in {
   0% {
@@ -148,13 +150,27 @@ ul.featured li {
     opacity: 100%;
   }
 }
-ul.featured li div.featured-img {
+ul.featured li a {
+  text-decoration: none;
+}
+ul.featured li a div.featured-img {
   width: 125px;
   height: 125px;
   background-color: #3f59a3;
   border-radius: 50%;
   animation-delay: 2s;
   animation: featured_in 1s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  color: white;
+}
+ul.featured li a div.featured-img:hover {
+  color: black;
+  background-color: #F4CF71;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 ul.featured li:nth-of-type(2) div.featured-img {
   animation-delay: 0s;

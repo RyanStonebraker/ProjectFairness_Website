@@ -11,6 +11,12 @@
   stroke-miterlimit: 10;
   z-index: -1;
 }
+figure {
+  max-width: 100%;
+}
+figure img {
+  max-width: 100%;
+}
 html,
 body {
   margin: 0;
@@ -100,6 +106,13 @@ header section.logo-container section.logo {
   background-repeat: no-repeat;
   height: 130px;
 }
+header h1.page-header {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 1px 1px 2px #3f59a3;
+}
 section.droplet-svg {
   width: 850px;
   height: 30px;
@@ -137,9 +150,10 @@ ul.featured li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   width: 30%;
+  margin: 0 3%;
   word-wrap: break-word;
 }
 @keyframes featured_in {

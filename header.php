@@ -47,6 +47,16 @@
           </ul>
         <?php endif; ?>
         <section class="logo-container"><section class="logo"></section></section>
+        <?php if (!is_home()) {
+          if (have_posts()) {
+            while (have_posts()) {
+              the_post();
+              ?>
+                <h1 class="page-header" <?php post_class(); ?>><?php the_title(); ?></h1>
+              <?php
+            }
+          }
+        } ?>
       </header>
       <?php if (is_home()) : ?>
         <?php if (!get_theme_mod('pf_featured_section_1_hide') && !get_theme_mod('pf_featured_section_2_hide') && !get_theme_mod('pf_featured_section_3_hide')) : ?>

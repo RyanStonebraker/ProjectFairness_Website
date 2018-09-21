@@ -56,3 +56,17 @@ function pf_donation_tracker($atts) {
 	return ob_get_clean();
 }
 add_shortcode('donation-tracker', 'pf_donation_tracker');
+
+function pf_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Page bottom sidebar',
+		'id'            => 'events_widget_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+}
+add_action('widgets_init', 'pf_widgets_init');

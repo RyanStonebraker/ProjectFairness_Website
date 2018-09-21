@@ -26,6 +26,9 @@ div.wp-block-button a.wp-block-button__link:hover {
   background-color: #F4CF71;
   transition: all 0.5s ease;
 }
+div.widget-area {
+  max-width: 1000px;
+}
 html,
 body {
   margin: 0;

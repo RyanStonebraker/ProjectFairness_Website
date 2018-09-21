@@ -378,6 +378,10 @@ footer {
   ul.featured li {
     width: auto;
   }
+  main {
+    width: 90%;
+    margin: auto;
+  }
   main article.team_member figure {
     min-width: none;
     max-width: none;

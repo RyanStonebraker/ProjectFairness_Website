@@ -130,6 +130,7 @@ header h1.page-header {
   color: white;
   font-size: 40px;
   text-shadow: 1px 1px 2px #3f59a3;
+  text-align: center;
 }
 section.droplet-svg {
   width: 850px;

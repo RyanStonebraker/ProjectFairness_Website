@@ -396,7 +396,7 @@ footer {
   main hr {
     width: auto;
   }
-  div.mdc-layout-grid__inner {
-    grid-template-columns: none;
+  div#cf7md-form {
+    overflow-x: hidden;
   }
 }

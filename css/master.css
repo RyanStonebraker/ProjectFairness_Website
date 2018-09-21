@@ -384,10 +384,6 @@ footer {
   main article figure {
     min-width: auto;
   }
-  main article figure img {
-    height: auto;
-    max-width: none;
-  }
   main article section.content {
     text-align: center;
   }

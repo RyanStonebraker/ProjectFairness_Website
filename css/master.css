@@ -12,7 +12,7 @@
   z-index: -1;
 }
 figure {
-  width: 100%;
+  width: auto;
 }
 figure img {
   max-width: 100%;

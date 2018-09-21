@@ -396,4 +396,7 @@ footer {
   main hr {
     width: auto;
   }
+  div.mdc-layout-grid__inner {
+    grid-template-columns: none;
+  }
 }

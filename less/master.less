@@ -1,3 +1,4 @@
+@import "mixins";
 @import "icons";
 @import "svgs";
 @import "common";
@@ -11,22 +12,7 @@ html, body {
   font-family: "Arial";
 }
 
-section.droplet-svg {
-  width: 850px;
-  height: 30px;
-  margin: 0 auto;
-  overflow: hidden;
-  margin-top: -50px;
-
-  -webkit-mask-image: url("../img/BG_hands_9.png");
-  mask-image: url("../img/BG_hands_9.png");
-
-  path.arrow-path {
-    stroke-dashoffset: -450;
-    stroke-dasharray: 450;
-    animation: dash 1s linear;
-  }
-}
+@import "droplet-svg";
 
 main {
   display: flex;

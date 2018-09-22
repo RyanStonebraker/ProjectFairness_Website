@@ -29,17 +29,6 @@ div.wp-block-button a.wp-block-button__link:hover {
 div.widget-area {
   max-width: 1000px;
 }
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 450;
-  }
-  50% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: -450;
-  }
-}
 header {
   background-image: url("../img/BG_hands_9.png");
   background-position: center;
@@ -194,19 +183,24 @@ body {
   padding: 0;
   font-family: "Arial";
 }
+@keyframes draw-on-off {
+  from {
+    stroke-dashoffset: 450;
+  }
+}
 section.droplet-svg {
   width: 850px;
   height: 30px;
   margin: 0 auto;
   overflow: hidden;
   margin-top: -50px;
-  -webkit-mask-image: url("../img/BG_hands_9.png");
-  mask-image: url("../img/BG_hands_9.png");
 }
 section.droplet-svg path.arrow-path {
   stroke-dashoffset: -450;
   stroke-dasharray: 450;
-  animation: dash 1s linear;
+  -webkit-animation: draw-on-off 1s linear forwards;
+  -moz-animation: draw-on-off 1s linear forwards;
+  animation: draw-on-off 1s linear forwards;
 }
 main {
   display: flex;

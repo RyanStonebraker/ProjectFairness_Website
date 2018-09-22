@@ -1,0 +1,19 @@
+@keyframes draw-on-off {
+  from {
+    stroke-dashoffset: 450;
+  }
+}
+
+section.droplet-svg {
+  width: 850px;
+  height: 30px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: -50px;
+
+  path.arrow-path {
+    stroke-dashoffset: -450;
+    stroke-dasharray: 450;
+    .animation(draw-on-off 1s linear forwards);
+  }
+}

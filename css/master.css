@@ -35,6 +35,21 @@ div.wp-block-button a.wp-block-button__link:hover {
 div.widget-area {
   max-width: 1000px;
 }
+a {
+  text-decoration: none;
+  color: #3f59a3;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+a:hover {
+  color: #F4CF71;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
 header {
   background-image: url("../img/BG_hands_9.png");
   background-position: center;

@@ -416,6 +416,7 @@ footer {
   }
   header nav.mobile-hide {
     height: 50px;
+    width: 100%;
     cursor: pointer;
   }
   header nav.mobile-hide a {
@@ -462,7 +463,11 @@ footer {
     width: auto;
   }
   main article figure {
+    margin: 0;
     min-width: auto;
+  }
+  main article figure img {
+    height: auto;
   }
   main article section.content {
     text-align: center;

@@ -50,6 +50,9 @@ a:hover {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
+div form {
+  text-align: center;
+}
 header {
   background-image: url("../img/BG_hands_9.png");
   background-position: center;
@@ -495,6 +498,9 @@ footer {
   }
   main article section.content {
     text-align: center;
+  }
+  main section.donation-tracker section.labels {
+    width: 80%;
   }
   main ul.wp-block-gallery {
     margin: 0;

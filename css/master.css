@@ -53,6 +53,20 @@ a:hover {
 div form {
   text-align: center;
 }
+div.cf7md-item {
+  text-align: left;
+}
+div#cf7md-form input[type="date"] {
+  height: 50px;
+  font-size: 16px;
+  background-color: whitesmoke;
+  border-top: none;
+  border-left: none;
+}
+div#cf7md-form .mdc-layout-grid__inner > p:not(.mdc-layout-grid__cell),
+div#cf7md-form div.cf7md-item {
+  text-align: left;
+}
 header {
   background-image: url("../img/BG_hands_9.png");
   background-position: center;

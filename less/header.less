@@ -1,0 +1,111 @@
+header {
+  background-image: url("../img/BG_hands_9.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+
+  nav {
+    background-color: @nav-color;
+    padding: 0 @full-width-padding;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 0;
+    }
+
+    a {
+      color: @background-color;
+      text-decoration: none;
+      padding: @nav-top-padding @nav-spacing @nav-bottom-padding @nav-spacing;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: @nav-font-size;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+
+    a:hover {
+      color: @nav-highlight-color;
+      font-size: @nav-font-size + 2px;
+      padding-bottom: @nav-bottom-padding - 4px;
+      transition: all 0.5s ease;
+    }
+  }
+
+  nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: @center-width;
+    z-index: 100;
+
+    a {
+      padding: @nav-bottom-padding @nav-spacing;
+    }
+    a:hover {
+      padding-bottom: @nav-bottom-padding - 2px;
+      padding-top: @nav-bottom-padding - 2px;
+    }
+  }
+
+  div.nav-spacer {
+    width: 100%;
+    height: @nav-bottom-padding + @nav-top-padding + @nav-font-size;
+    display: none;
+  }
+
+  ul.social-media {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 @full-width-padding;
+    min-height: 110px;
+
+    div {
+      transition: all 0.5s ease;
+    }
+
+    @scaled-media-size: 70px;
+    div:hover {
+      width: @scaled-media-size;
+      height: @scaled-media-size;
+      transition: all 0.5s ease;
+    }
+  }
+
+  section.logo-container {
+    padding: 2px;
+    background-color: @background-color;
+    border: 3px solid @nav-color;
+    margin: 0 auto;
+    width: @center-width;
+
+    section.logo {
+      background-image: url("../img/header.svg");
+      background-position: center;
+      background-color: @background-color;
+      background-size: @center-width - 4px;
+      padding: 4px;
+      border: 3px solid @nav-color;
+      background-repeat: no-repeat;
+      min-height: auto;
+      max-height: auto;
+      height: 130px;
+    }
+  }
+
+  h1.page-header {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    text-shadow: 1px 1px 2px @nav-color;
+    text-align: center;
+  }
+}

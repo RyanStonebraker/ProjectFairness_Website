@@ -1,0 +1,43 @@
+section.donation-tracker {
+  transition: all 0.5s ease;
+  display: flex;
+  background-color: @nav-color;
+  margin: 10px auto;
+  padding: 2px;
+  width: calc(90% + 10px);
+  max-width: @center-width + 10px;
+  height: 50px + 10px;
+  justify-content: center;
+  align-items: center;
+  div.donation-bar {
+    width: 500px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: 5px;
+    background-color: @nav-highlight-color;
+    transition: all 0.5s ease;
+  }
+
+  section.labels {
+    position: absolute;
+    display: flex;
+    height: 50px;
+    width: 90%;
+    max-width: @center-width * .9;
+    align-items: center;
+
+    h1 {
+      margin: 0;
+    }
+
+    h1.current {
+      margin-right: auto;
+      margin-left: 10px;
+    }
+
+    h1.goal {
+      margin-left: auto;
+      margin-right: 10px;
+    }
+  }
+}

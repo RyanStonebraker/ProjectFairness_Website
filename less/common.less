@@ -1,0 +1,40 @@
+@import "variables";
+
+figure {
+  width: auto;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+div.wp-block-button {
+  a.wp-block-button__link {
+    transition: all 0.5s ease;
+    background-color: @nav-color;
+  }
+
+  a.wp-block-button__link:hover {
+    color: black;
+    background-color: @nav-highlight-color;
+    transition: all 0.5s ease;
+  }
+}
+
+div.widget-area {
+  max-width: 1000px;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 450;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -450;
+  }
+}

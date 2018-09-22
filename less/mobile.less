@@ -65,13 +65,16 @@
   }
 
   ul.featured {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: auto;
 
     li {
       width: auto;
+      p {
+        max-width: 30vw;
+      }
     }
   }
 
@@ -120,5 +123,22 @@
   }
   div#cf7md-form {
     overflow-x: hidden;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  ul.featured {
+    li {
+      margin: 1%;
+      a {
+        div.featured-img {
+          width: 30vw;
+          height: 5vh;
+        }
+      }
+      p {
+        max-width: 30vw;
+      }
+    }
   }
 }

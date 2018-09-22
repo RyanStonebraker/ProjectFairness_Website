@@ -13,6 +13,11 @@
         .transition(all 0.5s ease);
       }
 
+      a:hover {
+        font-size: @nav-font-size;
+        padding: 30px;
+      }
+
       i {
         font-size: 25px;
         color: @background-color;
@@ -88,9 +93,11 @@
       figure {
         margin: 0;
         min-width: auto;
-        
+
         img {
-          height: auto;
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
         }
       }
 

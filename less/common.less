@@ -10,17 +10,17 @@ figure {
 
 div.wp-block-button {
   a.wp-block-button__link {
-    transition: all 0.5s ease;
+    .transition(all 0.5s ease);
     background-color: @nav-color;
   }
 
   a.wp-block-button__link:hover {
     color: black;
     background-color: @nav-highlight-color;
-    transition: all 0.5s ease;
+    .transition(all 0.5s ease);
   }
 }
 
 div.widget-area {
-  max-width: 1000px;
+  max-width: @center-width;
 }

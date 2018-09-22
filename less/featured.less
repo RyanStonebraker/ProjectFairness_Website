@@ -33,18 +33,18 @@ ul.featured {
         background-color: @nav-color;
         border-radius: 50%;
         animation-delay: 2s;
-        animation: featured_in 1s linear;
+        .animation(featured_in 1s linear);
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.5s ease;
+        .transition(all 0.5s ease);
         color: @background-color;
       }
 
       div.featured-img:hover {
         color: black;
         background-color: @nav-highlight-color;
-        transition: all 0.5s ease;
+        .transition(all 0.5s ease);
         cursor: pointer;
       }
     }

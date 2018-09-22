@@ -18,13 +18,19 @@ figure img {
   max-width: 100%;
 }
 div.wp-block-button a.wp-block-button__link {
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   background-color: #3f59a3;
 }
 div.wp-block-button a.wp-block-button__link:hover {
   color: black;
   background-color: #F4CF71;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 div.widget-area {
   max-width: 1000px;
@@ -56,13 +62,19 @@ header nav a {
   font-size: 11px;
   font-weight: bold;
   text-align: center;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 header nav a:hover {
   color: #F4CF71;
   font-size: 13px;
   padding-bottom: 16px;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 header nav.fixed {
   position: fixed;
@@ -92,12 +104,18 @@ header ul.social-media {
   min-height: 110px;
 }
 header ul.social-media div {
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 header ul.social-media div:hover {
   width: 70px;
   height: 70px;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 header section.logo-container {
   padding: 2px;
@@ -161,17 +179,27 @@ ul.featured li a div.featured-img {
   background-color: #3f59a3;
   border-radius: 50%;
   animation-delay: 2s;
+  -webkit-animation: featured_in 1s linear;
+  -moz-animation: featured_in 1s linear;
+  -ms-animation: featured_in 1s linear;
+  -o-animation: featured_in 1s linear;
   animation: featured_in 1s linear;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   color: white;
 }
 ul.featured li a div.featured-img:hover {
   color: black;
   background-color: #F4CF71;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   cursor: pointer;
 }
 ul.featured li:nth-of-type(2) div.featured-img {
@@ -200,6 +228,8 @@ section.droplet-svg path.arrow-path {
   stroke-dasharray: 450;
   -webkit-animation: draw-on-off 1s linear forwards;
   -moz-animation: draw-on-off 1s linear forwards;
+  -ms-animation: draw-on-off 1s linear forwards;
+  -o-animation: draw-on-off 1s linear forwards;
   animation: draw-on-off 1s linear forwards;
 }
 main {
@@ -270,7 +300,10 @@ main h1.donation-title {
   text-align: center;
 }
 main section.donation-tracker {
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   display: flex;
   background-color: #3f59a3;
   margin: 10px auto;
@@ -282,12 +315,44 @@ main section.donation-tracker {
   align-items: center;
 }
 main section.donation-tracker div.donation-bar {
-  width: 500px;
   height: 50px;
   margin-right: auto;
   margin-left: 5px;
   background-color: #F4CF71;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-animation: scale-in 1s ease;
+  -moz-animation: scale-in 1s ease;
+  -ms-animation: scale-in 1s ease;
+  -o-animation: scale-in 1s ease;
+  animation: scale-in 1s ease;
+}
+@-webkit-keyframes "scale-in" {
+  from {
+    width: 0;
+  }
+}
+@-moz-keyframes "scale-in" {
+  from {
+    width: 0;
+  }
+}
+@-ms-keyframes "scale-in" {
+  from {
+    width: 0;
+  }
+}
+@-o-keyframes "scale-in" {
+  from {
+    width: 0;
+  }
+}
+@keyframes "scale-in" {
+  from {
+    width: 0;
+  }
 }
 main section.donation-tracker section.labels {
   position: absolute;
@@ -321,21 +386,33 @@ footer {
   }
   header nav {
     flex-direction: column;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
   }
   header nav a {
     padding: 30px;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
   }
   header nav i {
     font-size: 25px;
     color: white;
     cursor: pointer;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
   }
   header nav i:hover {
     color: #F4CF71;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
   }
   header nav.mobile-hide {
     height: 50px;

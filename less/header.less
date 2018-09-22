@@ -3,7 +3,7 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 500px;
+  height: @header-height;
 
   nav {
     background-color: @nav-color;
@@ -26,14 +26,14 @@ header {
       font-size: @nav-font-size;
       font-weight: bold;
       text-align: center;
-      transition: all 0.5s ease;
+      .transition(all 0.5s ease);
     }
 
     a:hover {
       color: @nav-highlight-color;
       font-size: @nav-font-size + 2px;
       padding-bottom: @nav-bottom-padding - 4px;
-      transition: all 0.5s ease;
+      .transition(all 0.5s ease);
     }
   }
 
@@ -68,14 +68,14 @@ header {
     min-height: 110px;
 
     div {
-      transition: all 0.5s ease;
+      .transition(all 0.5s ease);
     }
 
     @scaled-media-size: 70px;
     div:hover {
       width: @scaled-media-size;
       height: @scaled-media-size;
-      transition: all 0.5s ease;
+      .transition(all 0.5s ease);
     }
   }
 

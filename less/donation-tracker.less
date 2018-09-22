@@ -1,5 +1,5 @@
 section.donation-tracker {
-  transition: all 0.5s ease;
+  .transition(all 0.5s ease);
   display: flex;
   background-color: @nav-color;
   margin: 10px auto;
@@ -9,13 +9,21 @@ section.donation-tracker {
   height: 50px + 10px;
   justify-content: center;
   align-items: center;
+
   div.donation-bar {
-    width: 500px;
     height: 50px;
     margin-right: auto;
     margin-left: 5px;
     background-color: @nav-highlight-color;
-    transition: all 0.5s ease;
+    .transition(all 0.5s ease);
+
+    .keyframes("scale-in", {
+      from {
+        width: 0;
+      }
+    });
+
+    .animation(scale-in 1s ease);
   }
 
   section.labels {

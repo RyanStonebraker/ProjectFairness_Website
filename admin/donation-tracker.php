@@ -38,7 +38,7 @@ function pf_donation_tracker_panel($wp_customize) {
     $content = get_content_from_pages(array(
       "donate",
       "marathon",
-      "brooklyn-marathon"
+      "Brooklyn Marathon and Half Marathon"
     ));
 
     $donation_tracker_matches = array();

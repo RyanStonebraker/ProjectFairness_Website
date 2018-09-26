@@ -281,7 +281,7 @@ main section.page-body {
 }
 main article.scholarship-winner {
   display: flex;
-  margin: 20px 0;
+  padding: 20px 0;
 }
 main article.scholarship-winner figure {
   margin: 0;

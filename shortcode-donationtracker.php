@@ -1,4 +1,3 @@
-
 <section class="donation-tracker-cell">
   <?php if (get_theme_mod("pf_donation_tracker_section_{$runnerShortName}_picture")) : ?>
     <img src="<?php echo get_theme_mod("pf_donation_tracker_section_{$runnerShortName}_picture"); ?>">

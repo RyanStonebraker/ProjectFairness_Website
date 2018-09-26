@@ -16,6 +16,17 @@ function addDonationTrackerSection ($wp_customize, $name) {
   addSettingWithTextControl($wp_customize, $section_id, 'goal', '', false);
 }
 
+function get_content_from_pages ($pages) {
+  $content = "";
+  foreach ($pages as $pageName) {
+    $page = get_page_by_title($pageName);
+    if ($page)
+      $content .= apply_filters('the_content', $page->post_content);
+  }
+
+  return $content;
+}
+
 function pf_donation_tracker_panel($wp_customize) {
     $panel_id = 'pf_donation_tracker_panel';
     $wp_customize->add_panel($panel_id, array(
@@ -24,8 +35,12 @@ function pf_donation_tracker_panel($wp_customize) {
         'description' => __('Configure the donation tracker.')
     ));
 
-    $page = get_page_by_title('donate');
-    $content = apply_filters('the_content', $page->post_content);
+    $content = get_content_from_pages(array(
+      "donate",
+      "marathon",
+      "brooklyn-marathon"
+    ));
+
     $donation_tracker_matches = array();
     preg_match_all('/\[\[donation-tracker=\'([a-zA-Z 0-9]*)\'\]\]/', $content, $donation_tracker_matches);
     foreach ($donation_tracker_matches as $donation_tracker) {

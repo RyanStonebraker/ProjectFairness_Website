@@ -52,7 +52,15 @@ add_shortcode('member', 'pf_member');
 
 function pf_donation_tracker($atts) {
 	ob_start();
-	get_template_part('donation', 'tracker');
+	if (array_key_exists("name", $atts))
+		$runner_name = $atts['name'];
+	else
+		return;
+
+	$runnerShortName = strtolower(str_replace(" ", "", $runner_name));
+
+	echo "<!-- [[donation-tracker='{$runner_name}']] -->";
+	include(locate_template('shortcode-donationtracker.php', false, false));
 	return ob_get_clean();
 }
 add_shortcode('donation-tracker', 'pf_donation_tracker');

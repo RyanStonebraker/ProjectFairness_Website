@@ -1,13 +1,37 @@
 <?php
-function pf_donation_tracker_section($wp_customize) {
-    $section_id = 'pf_donation_tracker_section';
-    $wp_customize->add_section($section_id, array(
+function addDonationTrackerSection ($wp_customize, $name) {
+  $panel_id = 'pf_donation_tracker_panel';
+  $shortName = strtolower(str_replace(" ", "", $name));
+  $section_id = "pf_donation_tracker_section_$shortName";
+  $wp_customize->add_section($section_id, array(
+      'capability' => 'edit_theme_options',
+      'title' => __("$name"),
+      'panel' => $panel_id,
+      'description' => __("Track donations for $name.")
+  ));
+  addSettingWithImageControl($wp_customize, $section_id, 'picture', '', false);
+  addSettingWithTextControl($wp_customize, $section_id, 'name', '', false);
+  addSettingWithTextControl($wp_customize, $section_id, 'runner_statement', '', false);
+  addSettingWithTextControl($wp_customize, $section_id, 'current_donations', '', false);
+  addSettingWithTextControl($wp_customize, $section_id, 'goal', '', false);
+}
+
+function pf_donation_tracker_panel($wp_customize) {
+    $panel_id = 'pf_donation_tracker_panel';
+    $wp_customize->add_panel($panel_id, array(
         'capability' => 'edit_theme_options',
         'title' => __('Donation Tracker'),
         'description' => __('Configure the donation tracker.')
     ));
-    addSettingWithTextControl($wp_customize, $section_id, 'title', '', false);
-    addSettingWithTextControl($wp_customize, $section_id, 'current_donations', '', false);
-    addSettingWithTextControl($wp_customize, $section_id, 'goal', '', false);
+
+    $page = get_page_by_title('donate');
+    $content = apply_filters('the_content', $page->post_content);
+    $donation_tracker_matches = array();
+    preg_match_all('/\[\[donation-tracker=\'([a-zA-Z 0-9]*)\'\]\]/', $content, $donation_tracker_matches);
+    foreach ($donation_tracker_matches as $donation_tracker) {
+      foreach ($donation_tracker as $runner) {
+        addDonationTrackerSection($wp_customize, $runner);
+      }
+    }
 }
-add_action('customize_register', 'pf_donation_tracker_section', 0);
+add_action('customize_register', 'pf_donation_tracker_panel', 0, 2);

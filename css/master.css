@@ -532,6 +532,7 @@ footer {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    max-width: 250px;
   }
   main article section.content {
     text-align: center;

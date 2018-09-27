@@ -14,6 +14,7 @@ function addDonationTrackerSection ($wp_customize, $name) {
   addSettingWithTextControl($wp_customize, $section_id, 'runner_statement', '', false);
   addSettingWithTextControl($wp_customize, $section_id, 'current_donations', '', false);
   addSettingWithTextControl($wp_customize, $section_id, 'goal', '', false);
+  addSettingWithTextControl($wp_customize, $section_id, 'donation-button-shortcode', '', false);
 }
 
 function get_content_from_pages ($pages) {

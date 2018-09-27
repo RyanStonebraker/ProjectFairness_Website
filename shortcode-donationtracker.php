@@ -28,5 +28,10 @@
         <h1 class="goal">$<?php echo get_theme_mod("pf_donation_tracker_section_{$runnerShortName}_goal"); ?></h1>
       </section>
     </section>
+    <section class="donate-for-team">
+      <?php if (get_theme_mod("pf_donation_tracker_section_{$runnerShortName}_donation-button-shortcode")) : ?>
+        <?php echo do_shortcode(get_theme_mod("pf_donation_tracker_section_{$runnerShortName}_donation-button-shortcode")); ?>
+      <?php endif; ?>
+    </section>
   </section>
 </section>

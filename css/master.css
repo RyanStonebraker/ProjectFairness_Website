@@ -265,6 +265,7 @@ section.droplet-svg path.arrow-path {
   animation: draw-on-off 1s linear forwards;
 }
 main {
+  margin-top: -50px;
   display: flex;
   flex-direction: column;
   justify-content: center;

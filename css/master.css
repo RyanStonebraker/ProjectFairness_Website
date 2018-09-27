@@ -550,6 +550,10 @@ footer {
     height: 50%;
     width: 50%;
   }
+  main section.donation-tracker-cell section.tracker section.runner-info h1.donation-title,
+  main section.donation-tracker-cell section.tracker section.runner-info p {
+    align-self: center;
+  }
   main section.donation-tracker-cell section.tracker section.donation-tracker section.labels {
     width: 60%;
   }

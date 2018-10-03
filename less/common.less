@@ -46,18 +46,36 @@ div.cf7md-item {
   text-align: left;
 }
 
-div#cf7md-form
-  {
-    input[type="date"] {
-      height: 50px;
-      font-size: 16px;
-      background-color: whitesmoke;
-      border-top: none;
-      border-left: none;
-    }
+div#cf7md-form {
+  input[type="date"] {
+    height: 50px;
+    font-size: 16px;
+    background-color: whitesmoke;
+    border-top: none;
+    border-left: none;
+  }
 
-    .mdc-layout-grid__inner > p:not(.mdc-layout-grid__cell),
-    div.cf7md-item {
-      text-align: left;
+  .mdc-layout-grid__inner > p:not(.mdc-layout-grid__cell),
+  div.cf7md-item {
+    text-align: left;
+  }
+}
+
+form.mc4wp-form-theme {
+  margin-top: 40px;
+  div.mc4wp-form-fields {
+    p {
+      input {
+        margin: auto;
+      }
+      input[type="submit"] {
+        background-color: @nav-color;
+      }
+
+      input[type="submit"]:hover {
+        background-color: @nav-highlight-color;
+        border-color: @nav-highlight-color;
+      }
     }
   }
+}

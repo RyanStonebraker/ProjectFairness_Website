@@ -74,10 +74,10 @@ form.mc4wp-form-theme div.mc4wp-form-fields p input {
   margin: auto;
 }
 form.mc4wp-form-theme div.mc4wp-form-fields p input[type="submit"] {
-  background-color: #3f59a3;
+  background-color: #3f59a3 !important;
 }
 form.mc4wp-form-theme div.mc4wp-form-fields p input[type="submit"]:hover {
-  background-color: #F4CF71;
+  background-color: #F4CF71 !important;
   border-color: #F4CF71;
 }
 header {

@@ -4,7 +4,6 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   height: @header-height;
-  margin-bottom: -50px;
 
   nav {
     background-color: @nav-color;
@@ -63,13 +62,20 @@ header {
   ul.social-media {
     list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
     padding: 0 @full-width-padding;
     min-height: 110px;
 
+    li {
+      flex: 1;
+      text-align: center;
+    }
+
     div {
       .transition(all 0.5s ease);
+      .transparent-shadow(5px, #fff);
     }
 
     @scaled-media-size: 70px;
@@ -77,6 +83,7 @@ header {
       width: @scaled-media-size;
       height: @scaled-media-size;
       .transition(all 0.5s ease);
+      .transparent-shadow(10px, rgba(255,255,255,.5));
     }
   }
 

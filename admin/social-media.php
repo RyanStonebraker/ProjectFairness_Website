@@ -7,5 +7,8 @@ function pf_social_media_section($wp_customize) {
         'description' => __('Configure the social media bar.')
     ));
     addSettingWithTextControl($wp_customize, $section_id, 'facebook', '', false);
+    addSettingWithTextControl($wp_customize, $section_id, 'instagram', '', false);
+    addSettingWithTextControl($wp_customize, $section_id, 'linkedin', '', false);
+    addSettingWithTextControl($wp_customize, $section_id, 'twitter', '', false);
 }
 add_action('customize_register', 'pf_social_media_section', 0);

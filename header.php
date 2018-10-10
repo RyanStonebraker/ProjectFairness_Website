@@ -45,6 +45,33 @@
                 <div class="icons8-facebook"></div>
               </a>
             </li>
+            <li>
+              <?php if (get_theme_mod('pf_social_media_section_instagram')) : ?>
+                <a href="<?php echo get_theme_mod('pf_social_media_section_instagram'); ?>" target="_blank">
+              <?php else: ?>
+                <a href="#">
+              <?php endif; ?>
+                <div class="icons8-instagram"></div>
+              </a>
+            </li>
+            <li>
+              <?php if (get_theme_mod('pf_social_media_section_linkedin')) : ?>
+                <a href="<?php echo get_theme_mod('pf_social_media_section_linkedin'); ?>" target="_blank">
+              <?php else: ?>
+                <a href="#">
+              <?php endif; ?>
+                <div class="icons8-linkedin"></div>
+              </a>
+            </li>
+            <li>
+              <?php if (get_theme_mod('pf_social_media_section_twitter')) : ?>
+                <a href="<?php echo get_theme_mod('pf_social_media_section_twitter'); ?>" target="_blank">
+              <?php else: ?>
+                <a href="#">
+              <?php endif; ?>
+                <div class="icons8-twitter"></div>
+              </a>
+            </li>
           </ul>
         <?php endif; ?>
         <section class="logo-container"><section class="logo"></section></section>

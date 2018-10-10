@@ -52,3 +52,8 @@
 	-ms-transition: @transition;
 	-o-transition: @transition;
 }
+
+.transparent-shadow (@amount: 5px, @color: #fff) {
+  -webkit-filter: drop-shadow(0px 0px @amount @color);
+  filter: drop-shadow(0px 0px @amount @color);
+}

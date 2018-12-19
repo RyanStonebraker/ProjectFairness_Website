@@ -120,7 +120,4 @@
           <?php endif; ?>
         </ul>
       <?php endif; ?>
-      <main>
-        <?php if (!is_home()) : ?>
-          <section class="page-body"><p <?php post_class(); ?>><?php the_content(); ?></p></section>
-        <?php endif; ?>
+      <main <?php if (is_home()) : ?> class="home" <?php endif; ?>>

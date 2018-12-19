@@ -5,6 +5,7 @@
 @import "variables";
 @import "header";
 @import "featured";
+@import "donate";
 
 html, body {
   margin: 0;
@@ -14,11 +15,18 @@ html, body {
 
 @import "droplet-svg";
 
+main.home {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -175px;
+  margin-bottom: 30px;
   article {
     width: @center-width;
     h1 {

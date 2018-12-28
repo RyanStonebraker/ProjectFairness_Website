@@ -332,6 +332,7 @@ main {
 }
 main article {
   width: 1000px;
+  margin-bottom: 15px;
 }
 main article h1 {
   font-size: 30px;

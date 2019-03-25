@@ -161,37 +161,6 @@ header div.nav-spacer {
   height: 81px;
   display: none;
 }
-header ul.social-media {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 calc((100% - 1000px)/2);
-  height: 75px;
-}
-header ul.social-media li {
-  flex: 1;
-  text-align: center;
-}
-header ul.social-media div {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-filter: drop-shadow(0px 0px 5px #fff);
-  filter: drop-shadow(0px 0px 5px #fff);
-}
-header ul.social-media div:hover {
-  width: 70px;
-  height: 70px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
-}
 header section.logo-container {
   padding: 2px;
   background-color: white;
@@ -200,7 +169,7 @@ header section.logo-container {
   width: 1000px;
 }
 header section.logo-container section.logo {
-  background-image: url("../img/header.svg");
+  background-image: url("../img/header.png");
   background-position: center;
   background-color: white;
   background-size: 996px;
@@ -218,6 +187,25 @@ header h1.page-header {
   font-size: 40px;
   text-shadow: 1px 1px 2px #3f59a3;
   text-align: center;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #3f59a3;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+footer ul.social-media {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  transition: all 0.5s ease;
+}
+footer ul.social-media :hover {
+  transition: all 0.5s ease;
+  opacity: 0.9;
 }
 ul.featured {
   list-style: none;
@@ -493,13 +481,6 @@ main section.tracker section.donate-for-team {
   align-self: flex-start;
   margin-left: 5%;
   margin-top: 1%;
-}
-footer {
-  display: flex;
-  padding: 30px;
-  background-color: #3f59a3;
-  color: white;
-  justify-content: center;
 }
 @media only screen and (max-width: 1000px) {
   header {

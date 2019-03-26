@@ -277,6 +277,9 @@ article.donate select {
 article.donate div:nth-of-type(2) {
   margin-top: 50px;
 }
+article.donate div:nth-of-type(2) figure {
+  margin-top: -25px;
+}
 article.donate,
 section.page-body {
   background-color: rgba(255, 255, 255, 0.75);
@@ -631,6 +634,9 @@ main section.tracker section.donate-for-team {
   }
   article.donate div:nth-of-type(2) div p {
     text-align: center;
+  }
+  article.donate div:nth-of-type(2) figure {
+    margin-top: 0;
   }
   article.donate div:nth-of-type(2) figure div iframe {
     width: 500px;

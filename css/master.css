@@ -627,6 +627,13 @@ main section.tracker section.donate-for-team {
     justify-content: center;
     align-items: center;
   }
+  article.donate div.wp-block-image {
+    display: flex;
+    justify-content: center;
+  }
+  article.donate div.wp-block-image figure {
+    max-width: 50%;
+  }
   article.donate div:nth-of-type(2) {
     display: flex;
     flex-direction: column;

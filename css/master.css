@@ -650,6 +650,9 @@ main section.tracker section.donate-for-team {
     height: 375px;
     max-width: 100%;
   }
+  figure iframe {
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 430px) {
   ul.featured li {

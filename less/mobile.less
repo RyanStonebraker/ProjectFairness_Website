@@ -152,6 +152,32 @@
   div#cf7md-form {
     overflow-x: hidden;
   }
+
+  article.donate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div:nth-of-type(2) {
+      display: flex;
+      flex-direction: column;
+
+      div {
+        p {
+          text-align: center;
+        }
+      }
+
+      figure {
+        div {
+          iframe {
+            width: 500px;
+            height: 375px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 430px) {

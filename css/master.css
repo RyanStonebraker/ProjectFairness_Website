@@ -616,6 +616,22 @@ main section.tracker section.donate-for-team {
   div#cf7md-form {
     overflow-x: hidden;
   }
+  article.donate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  article.donate div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+  }
+  article.donate div:nth-of-type(2) div p {
+    text-align: center;
+  }
+  article.donate div:nth-of-type(2) figure div iframe {
+    width: 500px;
+    height: 375px;
+  }
 }
 @media only screen and (max-width: 430px) {
   ul.featured li {

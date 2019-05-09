@@ -44,7 +44,7 @@ function pf_donation_tracker_panel($wp_customize) {
     ));
 
     $donation_tracker_matches = array();
-    preg_match_all('/\[\[donation-tracker=\'([a-zA-Z 0-9]*)\'\]\]/', $content, $donation_tracker_matches);
+    preg_match_all('/\[\[donation-tracker=\'([a-zA-Z 0-9\-]*)\'\]\]/', $content, $donation_tracker_matches);
     foreach ($donation_tracker_matches as $donation_tracker) {
       foreach ($donation_tracker as $runner) {
         addDonationTrackerSection($wp_customize, $runner);

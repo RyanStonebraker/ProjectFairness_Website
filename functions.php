@@ -52,8 +52,12 @@ add_shortcode('member', 'pf_member');
 
 function pf_donation_tracker($atts) {
 	ob_start();
-	if (array_key_exists("name", $atts))
+	$runner_name = "";
+	if (array_key_exists("name", $atts)) {
 		$runner_name = $atts['name'];
+		if (array_key_exists("marathon", $atts))
+			$runner_name .= " - " . $atts['marathon'];
+	}
 	else
 		return;
 

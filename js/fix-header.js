@@ -19,12 +19,4 @@ jQuery(document).ready(function ($) {
       }
     }
   });
-
-
-  $("header nav div.menu").mouseenter(function () {
-    $("header nav div.menu").css("overflow", "visible");
-  });
-  $("header nav div.menu").mouseleave(function () {
-    $("header nav div.menu").css("overflow", "hidden");
-  });
 });

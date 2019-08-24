@@ -512,6 +512,12 @@ main section.tracker section.donate-for-team {
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
   }
+  header nav div.menu {
+    overflow: visible;
+  }
+  header nav div.menu div.submenu {
+    height: auto;
+  }
   header nav a {
     padding: 30px;
     -webkit-transition: all 0.5s ease;
@@ -543,6 +549,12 @@ main section.tracker section.donate-for-team {
     height: 50px;
     width: 100%;
     cursor: pointer;
+  }
+  header nav.mobile-hide div.menu {
+    overflow: hidden;
+  }
+  header nav.mobile-hide div.menu div.submenu {
+    height: 0;
   }
   header nav.mobile-hide a {
     color: transparent;

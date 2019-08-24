@@ -27,7 +27,17 @@ function pf_scholarship_winners($atts) {
 	query_posts('cat=4');
 	while (have_posts()) {
 		the_post();
-		get_template_part('content', 'winner');
+		$tags = get_the_tags();
+		$matches_year = false;
+		if ($tags) {
+			foreach($tags as $tag) {
+				if ($tag->name == $atts["year"])
+					$matches_year = true;
+			}
+		}
+		if (!$atts || !array_key_exists("year", $atts) || $matches_year) {
+			get_template_part('content', 'winner');
+		}
 	}
 	return ob_get_clean();
 }

@@ -26,12 +26,31 @@
           <i class="fas fa-bars"></i>
           <?php
             $nav_locations = get_nav_menu_locations();
-            $nav = $nav_locations['top-menu'];
-            $top_nav = wp_get_nav_menu_items($nav);
+            $nav = wp_get_nav_menu_object($nav_locations["top-menu"]);
+            // $nav = $nav_locations['top-menu'];
+            $top_nav = wp_get_nav_menu_items($nav->term_id, array('order' => 'DESC'));
             if ($top_nav) :
-              foreach ($top_nav as $nav) : ?>
-                  <a href="<?php echo $nav->url; ?>"><?php echo $nav->title; ?></a>
-              <?php endforeach; ?>
+              $count = 0;
+              $submenu = false;
+              foreach ($top_nav as $nav) :
+                if (!$nav->menu_item_parent):
+                  $parent_id = $nav->ID;?>
+                  <div class="menu">
+                    <a href="<?php echo $nav->url; ?>"><?php echo $nav->title; ?></a>
+                <?php endif; ?>
+                <?php if ($parent_id == $nav->menu_item_parent): ?>
+                  <?php if (!$submenu): $submenu = true; ?>
+                    <div class="submenu">
+                  <?php endif; ?>
+                      <a href="<?php echo $nav->url; ?>"><?php echo $nav->title; ?></a>
+                  <?php if ($top_nav[$count + 1]->menu_item_parent != $parent_id && $submenu): ?>
+                    </div>
+                  <?php $submenu = false; endif; ?>
+                <?php endif; ?>
+                  <?php if ($top_nav[$count + 1]->menu_item_parent != $parent_id): ?>
+                    </div>
+                  <?php $submenu = false; endif; ?>
+              <?php $count++; endforeach; ?>
             <?php endif; ?>
 
         </nav>

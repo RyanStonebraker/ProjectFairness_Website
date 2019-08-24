@@ -118,7 +118,10 @@ header nav {
 header nav i {
   font-size: 0;
 }
-header nav a {
+header nav div.menu {
+  overflow: hidden;
+}
+header nav div.menu a {
   color: white;
   text-decoration: none;
   padding: 50px 15px 20px 15px;
@@ -133,14 +136,24 @@ header nav a {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
-header nav a:hover {
+header nav div.menu a:hover {
   color: #F4CF71;
-  font-size: 13px;
-  padding-bottom: 16px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+}
+header nav div.menu div.submenu {
+  height: 0;
+  background-color: #3f59a3;
+}
+header nav div.menu div.submenu a {
+  background-color: #3f59a3;
+  padding: 15px 5px;
+}
+header nav div.menu div.submenu a:last-of-type {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 header nav.fixed {
   position: fixed;

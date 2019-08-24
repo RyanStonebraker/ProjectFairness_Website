@@ -16,24 +16,39 @@ header {
       font-size: 0;
     }
 
-    a {
-      color: @background-color;
-      text-decoration: none;
-      padding: @nav-top-padding @nav-spacing @nav-bottom-padding @nav-spacing;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: @nav-font-size;
-      font-weight: bold;
-      text-align: center;
-      .transition(all 0.5s ease);
-    }
+    div.menu {
+      overflow: hidden;
+      a {
+        color: @background-color;
+        text-decoration: none;
+        padding: @nav-top-padding @nav-spacing @nav-bottom-padding @nav-spacing;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: @nav-font-size;
+        font-weight: bold;
+        text-align: center;
+        .transition(all 0.5s ease);
+      }
 
-    a:hover {
-      color: @nav-highlight-color;
-      font-size: @nav-font-size + 2px;
-      padding-bottom: @nav-bottom-padding - 4px;
-      .transition(all 0.5s ease);
+      a:hover {
+        color: @nav-highlight-color;
+        .transition(all 0.5s ease);
+      }
+
+      div.submenu {
+        height: 0;
+        background-color: @nav-color;
+
+        a {
+          background-color: @nav-color;
+          padding: 15px 5px;
+        }
+        a:last-of-type {
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
     }
   }
 

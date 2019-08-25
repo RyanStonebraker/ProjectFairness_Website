@@ -324,6 +324,9 @@ section.droplet-svg path.arrow-path {
 main.home {
   margin-top: 0;
   margin-bottom: 0;
+  margin-top: -290px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px white;
 }
 main {
   display: flex;
@@ -582,6 +585,12 @@ main section.tracker section.donate-for-team {
   }
   ul.featured li p {
     max-width: 30vw;
+  }
+  main.home {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: inherit;
+    box-shadow: none;
   }
   main {
     width: 90%;
